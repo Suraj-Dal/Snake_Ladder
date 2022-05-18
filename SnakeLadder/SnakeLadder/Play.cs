@@ -14,19 +14,27 @@ namespace SnakeLadder
         public void rollDice()
         {
             Random random = new Random();
-            Player1 = random.Next(0, 7);
-            int check1 = random.Next(0, 3);
 
-            switch (check1)
+            while (position1 != 100)
             {
-                case 0:
-                    break;
-                case 1:
-                    position1 += Player1;
-                    break;
-                case 2:
+                Player1 = random.Next(0, 7);
+                int check1 = random.Next(0, 3);
+
+                switch (check1)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        position1 += Player1;
+                        break;
+                    case 2:
+                        position1 -= Player1;
+                        break;
+                }
+                if (position1 < 0)
+                    position1 = 0;
+                if (position1 > 100)
                     position1 -= Player1;
-                    break;
             }
         }
     }
