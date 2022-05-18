@@ -10,5 +10,10 @@ namespace SnakeLadder
     {
         int position1 = 0;
         int Player1;
-    }
+
+        public void rollDice()
+        {
+            Random random = new Random();
+            Player1 = random.Next(0, 7);
+        }
 }
