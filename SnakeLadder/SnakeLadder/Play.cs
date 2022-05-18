@@ -15,5 +15,19 @@ namespace SnakeLadder
         {
             Random random = new Random();
             Player1 = random.Next(0, 7);
+            int check1 = random.Next(0, 3);
+
+            switch (check1)
+            {
+                case 0:
+                    break;
+                case 1:
+                    position1 += Player1;
+                    break;
+                case 2:
+                    position1 -= Player1;
+                    break;
+            }
         }
+    }
 }
