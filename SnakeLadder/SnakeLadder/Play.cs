@@ -38,6 +38,7 @@ namespace SnakeLadder
                     position1 -= Player1;
                 Console.WriteLine("Dice roll: " + count + " Position of Player 1: " + position1);
             }
+            Console.WriteLine("Dice rolled for " + count + " no. of time.");
         }
     }
 }
