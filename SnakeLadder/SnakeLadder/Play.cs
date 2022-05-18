@@ -8,7 +8,7 @@ namespace SnakeLadder
 {
     internal class Play
     {
-        int position1 = 0;
+        int position1 = 0, count = 0;
         int Player1;
 
         public void rollDice()
@@ -19,6 +19,7 @@ namespace SnakeLadder
             {
                 Player1 = random.Next(0, 7);
                 int check1 = random.Next(0, 3);
+                count++;
 
                 switch (check1)
                 {
@@ -35,6 +36,7 @@ namespace SnakeLadder
                     position1 = 0;
                 if (position1 > 100)
                     position1 -= Player1;
+                Console.WriteLine("Dice roll: " + count + " Position of Player 1: " + position1);
             }
         }
     }
